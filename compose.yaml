@@ -1,10 +1,11 @@
 services:
   app:
-    image: sail-8.5/app:latest
+    image: serversideup/php:8.5-fpm-nginx
+
+    working_dir: /var/www/html
+
     volumes:
-      - .:/app
+      - .:/var/www/html
+
     ports:
-      - 8080:80
-    entrypoint: []
-    command: tail -f /dev/null
-    working_dir: /app
+      - "8080:8080"
