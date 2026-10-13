@@ -1,0 +1,9 @@
+services:
+  app:
+    image: sail-8.5/app:latest
+    volumes:
+      - .:/app
+    ports:
+      - 8080:80
+    command: tail -f /dev/null
+    working_dir: /app
